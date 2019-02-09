@@ -4,5 +4,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Test</title>
     {{ $style := resources.Get "scss/styles.scss" | toCSS | minify | fingerprint }}
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600" rel="stylesheet">
     <link rel="stylesheet" href="{{ $style.Permalink }}">
 </head>
