@@ -1,0 +1,7 @@
+<nav role="navigation" aria-label="Main menu" id="navbar">
+    <ul class="menu__items" aria-label="menu">{{ $current := . }}
+        {{ range .Site.Menus.main }}<li aria-label="{{ .Name }}">
+            <a href="{{ .URL }}" class="{{ if $current.IsMenuCurrent "main" . }}active{{ end }}" alt="{{ .Name }}" role="menuitem">{{ .Name }}</a>
+        </li>{{ end }}
+    </ul>
+</nav>
