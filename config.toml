@@ -2,3 +2,7 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "starter"
+
+[params]
+    description = "Meta description goes here"
+    images = ["images/metaImage.jpg"]
