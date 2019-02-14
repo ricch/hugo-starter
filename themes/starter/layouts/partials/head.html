@@ -2,11 +2,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="{{ if (isset .Params "description") }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <title>{{ .Site.Title }} - {{ .Title }}</title>
-    {{ if .Params.redirectURL }}<meta http-equiv="refresh" content="0; url='{{ .Params.redirectURL }}'"/>{{ end }}
     {{ $style := resources.Get "scss/styles.scss" | toCSS | minify | fingerprint }}
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600" rel="stylesheet">
     <link rel="stylesheet" href="{{ $style.Permalink }}">
     {{ if .Params.hidden }}<meta name="robots" content="noindex">{{ end }}
-    <meta name="description" content="{{ if (isset .Params "description") }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    {{ if .Params.redirectURL }}<meta http-equiv="refresh" content="0; url='{{ .Params.redirectURL }}'"/>{{ end }}
 </head>
