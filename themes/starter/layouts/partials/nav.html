@@ -1,38 +1,23 @@
 <nav role="navigation" aria-label="Main menu" id="navbar">
-    <!-- <ul class="menu__items" aria-label="menu">
-        {{ $current := . }}
-        {{ range .Site.Menus.main }}
-        <li aria-label="{{ .Name }}">
-            <a href="{{ .URL }}" class="{{ if $current.IsMenuCurrent "main" . }}active{{ end }}" alt="{{ .Name }}" role="menuitem">{{ .Name }}</a>
-        </li>
-        {{ end }}
-    </ul> -->
-
     <ul aria-label="menu">
-        {{ $currentPage := . }}
-        {{ range .Site.Menus.main }}
-            {{ if .HasChildren }}
-                <li aria-label="{{ .Name }}" class="dropdown">
-                    <a href="#" class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}" role="menuitem">
-                        {{ .Pre }}
-                        <span>{{ .Name }}</span>
-                    </a>
-                    <ul class="sub-menu">
-                        {{ range .Children }}
-                            <li class="sub-menu-item" aria-label="{{ .Name }}">
-                                <a href="{{ .URL }}" role="menuitem">{{ .Name }}</a>
-                            </li>
-                        {{ end }}
-                    </ul>
-                </li>
-            {{ else }}
-                <li aria-label="{{ .Name }}">
-                    <a href="{{ .URL }}" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" role="menuitem">
-                        {{ .Pre }}
-                        <span>{{ .Name }}</span>
-                    </a>
-                </li>
-            {{ end }}
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+        {{ if .HasChildren }}
+            <li aria-label="{{ .Name }}" class="dropdown">
+                <a href="#" class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}" role="menuitem">{{ .Name }}</a>
+                <ul class="sub-menu">
+                    {{ range .Children }}
+                    <li class="sub-menu-item" aria-label="{{ .Name }}">
+                        <a href="{{ .URL }}" role="menuitem">{{ .Name }}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </li>
+        {{ else }}
+            <li aria-label="{{ .Name }}">
+                <a href="{{ .URL }}" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" role="menuitem">{{ .Name }}</a>
+            </li>
         {{ end }}
+    {{ end }}
     </ul>
 </nav>

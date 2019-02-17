@@ -6,6 +6,7 @@ theme = "starter"
 [params]
     description = "Meta description goes here"
     images = ["images/metaImage.jpg"]
+    logo = "/images/logo-hugo.svg"
 
 [menu]
 
