@@ -12,7 +12,7 @@
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
             {{ if .HasChildren }}
-                <li aria-label="{{ .Name }}">
+                <li aria-label="{{ .Name }}" class="dropdown">
                     <a href="#" class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}" role="menuitem">
                         {{ .Pre }}
                         <span>{{ .Name }}</span>
