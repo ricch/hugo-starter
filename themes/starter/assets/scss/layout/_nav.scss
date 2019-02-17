@@ -3,6 +3,7 @@
         li {
             list-style: none;
             display: inline-block;
+            // position: relative;
             a {
                 color: #333;
                 transition: .3s all;
@@ -24,6 +25,18 @@
         }
     }
     .sub-menu {
-        position: absolute;;
+        position: absolute;
+        top: 4rem;
+        box-shadow: 0 0 .5rem rgba(0,0,0,.1);
+        background-color: rgba(255,255,255,.96);
+        .sub-menu-item {
+            display: block;
+            margin: 0;
+            padding: 1rem .5rem;
+            a {
+                margin: 0;
+                padding: 1rem;
+            }
+        }
     }
 }
