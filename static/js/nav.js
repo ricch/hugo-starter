@@ -4,9 +4,9 @@ function myFunction() {
     let x = document.getElementById("hamburger");
     if (x.innerHTML === burger) {
         x.innerHTML = close;
-        document.getElementById('navbar').classList.toggle("show");
+        document.getElementById('nav-wrapper').classList.toggle("show");
     } else {
         x.innerHTML = burger;
-        document.getElementById('navbar').classList.toggle("show");
+        document.getElementById('nav-wrapper').classList.toggle("show");
     }
 }
