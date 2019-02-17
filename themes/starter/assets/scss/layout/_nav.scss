@@ -60,11 +60,25 @@
                 &.active {
                     color: $primary;
                 }
+                &:focus {
+                    outline: none;
+                    color: $primary;
+                    text-decoration: underline;
+                    text-underline-position: under;
+                }
             }
-
             @media (min-width: 768px) {
                 &:nth-child(1) {
                     margin-left: -1.25rem;
+                }
+            }
+            &:hover, &:focus-within {
+                .sub-menu {
+                    @media (min-width: 768px) {
+                        visibility: visible;
+                        opacity: .98;
+                        display: block;
+                    }
                 }
             }
         }

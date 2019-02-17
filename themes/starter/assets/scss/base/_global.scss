@@ -15,6 +15,12 @@ a {
 		text-decoration: underline;
 		text-underline-position: under;
 	}
+	&:focus {
+		outline: none;
+		color: $primary;
+		text-decoration: underline;
+		text-underline-position: under;
+	}
 }
 
 main {
