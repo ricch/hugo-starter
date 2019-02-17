@@ -27,7 +27,7 @@
     .dropdown {
         position: relative;
         &::after {
-            content: "x";
+            content: url('/images/chevron-d.svg');
             position: absolute;
             right: -.125rem;
             top: 0;
