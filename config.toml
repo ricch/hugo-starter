@@ -5,7 +5,7 @@ theme = "starter"
 
 [params]
     description = "Meta description goes here"
-    images = ["images/metaImage.jpg"]
+    images = ["images/gohugoio-card.png"]
     logo = "/images/logo-hugo.svg"
 
 [menu]
