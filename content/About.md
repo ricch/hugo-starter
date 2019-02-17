@@ -1,7 +1,7 @@
 ---
-title: "Item 1"
+title: "About"
 date: 2019-02-09T13:43:29-05:00
-menu: main
+# menu: main
 ---
 
-Item 1
+About Page

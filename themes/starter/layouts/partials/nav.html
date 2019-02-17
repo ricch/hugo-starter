@@ -1,7 +1,38 @@
 <nav role="navigation" aria-label="Main menu" id="navbar">
-    <ul class="menu__items" aria-label="menu">{{ $current := . }}
-        {{ range .Site.Menus.main }}<li aria-label="{{ .Name }}">
+    <!-- <ul class="menu__items" aria-label="menu">
+        {{ $current := . }}
+        {{ range .Site.Menus.main }}
+        <li aria-label="{{ .Name }}">
             <a href="{{ .URL }}" class="{{ if $current.IsMenuCurrent "main" . }}active{{ end }}" alt="{{ .Name }}" role="menuitem">{{ .Name }}</a>
-        </li>{{ end }}
+        </li>
+        {{ end }}
+    </ul> -->
+
+    <ul>
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+            {{ if .HasChildren }}
+                <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+                    <a href="#">
+                        {{ .Pre }}
+                        <span>{{ .Name }}</span>
+                    </a>
+                    <ul class="sub-menu">
+                        {{ range .Children }}
+                            <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                                <a href="{{ .URL }}">{{ .Name }}</a>
+                            </li>
+                        {{ end }}
+                    </ul>
+                </li>
+            {{ else }}
+                <li>
+                    <a href="{{ .URL }}">
+                        {{ .Pre }}
+                        <span>{{ .Name }}</span>
+                    </a>
+                </li>
+            {{ end }}
+        {{ end }}
     </ul>
 </nav>
