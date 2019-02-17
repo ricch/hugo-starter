@@ -1,10 +1,10 @@
 <nav role="navigation" aria-label="Main menu" id="navbar">
-    <ul aria-label="menu">
+    <ul id="nav" aria-label="menu">
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
         {{ if .HasChildren }}
-            <li aria-label="{{ .Name }}" class="dropdown">
-                <a href="#" class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}" role="menuitem">{{ .Name }}</a>
+            <li class="nav-item dropdown" aria-label="{{ .Name }}">
+                <a href="#" class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}" role="menuitem" aria-haspopup="true" aria-expanded="false">{{ .Name }}</a>
                 <ul class="sub-menu">
                     {{ range .Children }}
                     <li class="sub-menu-item" aria-label="{{ .Name }}">
@@ -14,10 +14,11 @@
                 </ul>
             </li>
         {{ else }}
-            <li aria-label="{{ .Name }}">
+            <li class="nav-item" aria-label="{{ .Name }}">
                 <a href="{{ .URL }}" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" role="menuitem">{{ .Name }}</a>
             </li>
         {{ end }}
     {{ end }}
     </ul>
+    <a href="#" id="hamburger" onclick="myFunction()">&#9776;</a>
 </nav>
