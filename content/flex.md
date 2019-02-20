@@ -54,7 +54,3 @@ menu: main
         <div class="flex-1-4"><p>Sodales neque sodales ut etiam sit amet. Turpis tincidunt id aliquet risus feugiat in ante metus. Et netus et malesuada fames ac turpis egestas sed. Sit amet est placerat in egestas erat imperdiet sed. Neque egestas congue quisque egestas diam in arcu cursus. Faucibus et molestie ac feugiat sed lectus vestibulum mattis.</p></div>
     </div>
 </section>
-
-<script>
-    ScrollReveal().reveal('.reveal', { easing: 'ease-in-out', duration: '500', delay: '500', scale: 0.85 });
-</script>
