@@ -1,6 +1,7 @@
 # Hugo Starter Template
 
 ## Using Scroll Reveal
+ScrollReveal is a JavaScript library for easily animating elements as they enter/leave the viewport. 
 
 ScrollReveal().reveal(target, options);
 
