@@ -1,6 +1,7 @@
 ---
 title: "Style Guide"
 date: 2019-02-09T23:57:06-05:00
+menu: main
 # hidden: true
 aliases:
     - /style-guides/
