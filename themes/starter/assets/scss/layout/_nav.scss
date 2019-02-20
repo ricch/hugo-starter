@@ -76,10 +76,15 @@
                 .sub-menu {
                     @media (min-width: 768px) {
                         visibility: visible;
-                        opacity: .98;
+                        opacity: .99;
                         display: block;
                     }
                 }
+            }
+        }
+        a {
+            &:hover {
+                text-decoration: none;
             }
         }
     }
@@ -108,7 +113,7 @@
         opacity: 0;
         top: 2rem;
         width: 200px;
-        box-shadow: 0 0 .5rem rgba(0,0,0,.1);
+        box-shadow: 0 .25rem .75rem rgba(0,0,0,.2);
         background-color: rgba(255,255,255,.96);
         transition: .3s all;
         .sub-menu-item {
