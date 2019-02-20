@@ -3,7 +3,7 @@
 ## Using Scroll Reveal
 ScrollReveal is a JavaScript library for easily animating elements as they enter/leave the viewport. 
 
-ScrollReveal().reveal(target, options);
+Add `ScrollReveal().reveal(target, options);` to the <script> in the footer
 
 ie:
 ScrollReveal().reveal('.reveal', { delay: 500, duration: 500 });

@@ -2,6 +2,7 @@
 title: "Using Flex"
 date: 2019-02-17T17:56:46-05:00
 menu: main
+description: "Templates for using Flex"
 ---
 
 <h1>Using flex classes for columns</h1>
