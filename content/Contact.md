@@ -21,7 +21,5 @@ description: "Meta Description about the Contact Page"
     </div>
     <label for="message">Message</label>
     <textarea cols="30" rows="4" name="message" id="message" required="true"></textarea>
-    <button class="round">
-        <input type="submit" value="Get In Touch">
-    </button>
+    <input type="submit" value="Get In Touch" class="btn-pill">
 </form>

@@ -25,8 +25,11 @@ form {
         width: auto;
         appearance: none;  
         border: none;
-        background-color: transparent;
-        margin: 0;
-        padding: 0;
+        // background-color: transparent;
+        // margin: 0;
+        // padding: 0;
+        &:hover {
+            cursor: pointer;
+        }
     }
 }

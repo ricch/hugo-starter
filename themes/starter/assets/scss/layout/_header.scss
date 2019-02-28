@@ -10,9 +10,11 @@ header {
     .logo {
         max-width: 150px;
         flex-grow: 1;
+        padding: .675rem;
+        margin-left: -.675rem;
         &:focus {
             border-radius: .25rem;
-            box-shadow: 0 0 1.5px 1px rgba(0,0,0,0.2);
+            box-shadow: 0 0 4px 0px $primary;
         }
     }
     #nav-wrapper {

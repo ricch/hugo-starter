@@ -1,5 +1,23 @@
-button {
+.btn {
     padding: 1rem;
     background-color: $primary;
     color:#fff;
+    transition: .3s all;
+    &:hover {
+        background-color: darken($primary, 15);
+    }
+    &:focus {
+        background-color: darken($primary, 15);
+        box-shadow: 0 .375rem .675rem rgba(0,0,0,.2);
+    }
+}
+
+.btn-round {
+    @extend .btn;
+    border-radius: .375rem;
+}
+.btn-pill {
+    @extend .btn;
+    border-radius: 100px;
+    padding: 1rem 1.5rem;
 }
