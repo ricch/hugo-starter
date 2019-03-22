@@ -1,7 +1,10 @@
 # Hugo Starter Template
 
+https://hugostarter.netlify.com
+
 ## Using Scroll Reveal
-ScrollReveal is a JavaScript library for easily animating elements as they enter/leave the viewport. 
+
+ScrollReveal is a JavaScript library for easily animating elements as they enter/leave the viewport.
 
 Add `ScrollReveal().reveal(target, options);` to the <script> in the footer
 
